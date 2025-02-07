@@ -27,13 +27,13 @@ async function ProcessImage() {
     emit('onProcessing', Step.PROCESSING_IMAGE)
 
 
+    console.log("STEP 3: Enrol Document");
     const classification = await EnrolDocument();
     store.side = (classification.PageSide == "FRONT") ? "BACK" :classification.PageSide;
 
-    console.log(classification);
-
     if (classification.HasError) {
-        //TODO we should show some error screen to retry here.
+       console.log(classification.Error);
+        //TODO you should handle any error gracefully.
         return;
         
     }

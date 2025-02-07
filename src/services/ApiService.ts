@@ -22,12 +22,13 @@ export async function CreateSession() {
 
 export async function EnrolDocument() {
     const url = BASE_URL + '/api/v1/enrolment/document';
+
     const headers = {
                 headers: {
                     'Content-Type': 'application/json',
                     'x-api-key': API_KEY,
                     'X-Correlation-Id': store.correlationId,
-                    'x-session-id' : store.accessToken
+                    'x-access-token' : store.accessToken
                 }
             };
 
@@ -38,7 +39,6 @@ export async function EnrolDocument() {
             "imageBase": base64image
     };
 
-   
     const response = await axios.post(url, body, headers);
 
     return response.data;

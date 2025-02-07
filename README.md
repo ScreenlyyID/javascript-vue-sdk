@@ -34,42 +34,42 @@ https://app.theneo.io/screenlyyid/ScreenlyyID/get-started/custom-integration
 
 The API steps here can be replicated with your own document capture UI.
 
-Step 1: Create Instance
+**Step 1: Create Instance**
   - DocumentService.ts
     - InitVerificationProcess() > GetCorrelationId()
 
-Step 2: Create a Document Session
+**Step 2: Create a Document Session**
   - DocumentService.ts
     - InitVerificationProcess() > CreateSession()
 
-Step 3: Enrol the Document
+**Step 3: Enrol the Document**
   - DocumentAutoCapture.vue
     - ProcessImage() > EnrolDocument()
 
-Step 4: Liveness Check
+**Step 4: Liveness Check**
   - DocumnetService.ts
     - ProcessIDandSelfie() > ProcessLiveness()
 
-Step 5: DocumentImageList()
+**Step 5: Document Image List**
   - this call is skipped in the demo, you should implement it in your system.
 
-Step 6: Document Image Download
+**Step 6: Document Image Download**
   - DocumentService.ts
     - ProcessIDandSelfie() > GetDocumentPhoto()
 
-Step 7: Face Match Check
+**Step 7: Face Match Check**
   - DocumentService.ts
     - ProcessIDandSelfie() > ProcessFaceMatch()
 
-Step 8: Complete Enrolment
+**Step 8: Complete Enrolment**
   - DocumentService.ts
     - ProcessIDandSelfie() > CompleleEnrolment()
 
-Step 9: Get OCR Data
+**Step 9: Get OCR Data**
   - DocumentService.ts
     - ProcessIDandSelfie() > GetDocumentData()
 
-Step 9: Get Decision Results
+**Step 10: Get Decision Results**
   - DocumentService.ts
     - ProcessIDandSelfie() > GetDecisionResults()
 

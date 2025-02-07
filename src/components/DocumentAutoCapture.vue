@@ -32,7 +32,9 @@ async function ProcessImage() {
 
     if (classification.HasError) {
        console.log(classification.Error);
-        //TODO you should handle any error gracefully.
+       console.log("handle gracefully and ask for the image to be re-submitted. I.e repeat document capture and Step 3.");
+        //TODO you should handle any error gracefully. 
+        // Here you can ask the user to re-take the photo of their ID and re-enrol the image with the same correlationId and AccessToken.
         return;
         
     }

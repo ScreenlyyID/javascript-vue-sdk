@@ -47,7 +47,7 @@ The API steps here can be replicated with your own document capture UI.
     - ProcessImage() > EnrolDocument()
 
 **Step 4: Liveness Check**
-  - DocumnetService.ts
+  - DocumentService.ts
     - ProcessIDandSelfie() > ProcessLiveness()
 
 **Step 5: Document Image List**

@@ -14,7 +14,6 @@ const parentFn:any = inject('parentFn');
 const isButtonDisabled = ref(true);
 
 const handlePhotoTaken: DocumentCallback = async (imageData) => {
-  console.log("handlePhotoTaken 1");
   isButtonDisabled.value = false;
 
   store.image = imageData.image;
